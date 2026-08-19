@@ -153,10 +153,20 @@ details[open] .accordion-chevron {
 
 /* Glassmorphism accents */
 .glass-header {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: #FFFFFF;
+  background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px)) {
+  .glass-header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
 }
 
 /* Trust Pill Icon Highlights */
@@ -173,22 +183,36 @@ details[open] .accordion-chevron {
   font-weight: 600;
 }
 
-/* Mobile drawer animation */
+/* Mobile drawer positioning and animation */
 #mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-height: calc(100vh - 4.5rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
   transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 50;
 }
 
 #mobile-menu.menu-hidden {
   display: none !important;
-  opacity: 0;
-  pointer-events: none;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
   transform: translateY(-8px);
 }
 
 #mobile-menu.menu-visible {
   display: block !important;
-  opacity: 1;
-  pointer-events: auto;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
   transform: translateY(0);
 }
 

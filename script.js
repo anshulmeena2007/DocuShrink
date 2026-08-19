@@ -22,25 +22,34 @@ function initMobileNavigation() {
 
   if (!menuBtn || !mobileMenu) return;
 
-  function toggleMenu(isOpen) {
-    const shouldOpen = typeof isOpen === 'boolean' ? isOpen : mobileMenu.classList.contains('menu-hidden');
+  function toggleMenu(forceOpen) {
+    const isCurrentlyHidden = mobileMenu.classList.contains('menu-hidden') || mobileMenu.style.display === 'none';
+    const shouldOpen = typeof forceOpen === 'boolean' ? forceOpen : isCurrentlyHidden;
     
     if (shouldOpen) {
-      mobileMenu.classList.remove('menu-hidden');
+      mobileMenu.classList.remove('menu-hidden', 'hidden');
       mobileMenu.classList.add('menu-visible');
+      mobileMenu.style.display = 'block';
       menuBtn.setAttribute('aria-expanded', 'true');
       if (menuIconOpen) menuIconOpen.classList.add('hidden');
       if (menuIconClose) menuIconClose.classList.remove('hidden');
     } else {
       mobileMenu.classList.remove('menu-visible');
       mobileMenu.classList.add('menu-hidden');
+      mobileMenu.style.display = 'none';
       menuBtn.setAttribute('aria-expanded', 'false');
       if (menuIconOpen) menuIconOpen.classList.remove('hidden');
       if (menuIconClose) menuIconClose.classList.add('hidden');
     }
   }
 
-  menuBtn.addEventListener('click', () => toggleMenu());
+  // Ensure initial closed state
+  toggleMenu(false);
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
 
   // Close menu when clicking outside or clicking any nav link
   document.addEventListener('click', (e) => {

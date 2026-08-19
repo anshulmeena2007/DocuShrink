@@ -175,16 +175,18 @@ details[open] .accordion-chevron {
 
 /* Mobile drawer animation */
 #mobile-menu {
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 #mobile-menu.menu-hidden {
+  display: none !important;
   opacity: 0;
   pointer-events: none;
   transform: translateY(-8px);
 }
 
 #mobile-menu.menu-visible {
+  display: block !important;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);

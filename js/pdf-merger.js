@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Merge PDF Engine (Phase 4)
+ * DocuHug — Merge PDF Engine (Phase 4)
  * High-performance, client-side PDF document merger using pdf-lib.
  * Strictly 100% Client-Side.
  */

@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Image to PDF Engine (Phase 3)
+ * DocuHug — Image to PDF Engine (Phase 3)
  * High-performance, client-side PDF document generation from multiple images using jsPDF.
  * Strictly 100% Client-Side.
  */

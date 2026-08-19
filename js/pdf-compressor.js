@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Compress PDF / PDF Optimizer Engine (Phase 4)
+ * DocuHug — Compress PDF / PDF Optimizer Engine (Phase 4)
  * Client-side PDF optimization and stream compression using pdf-lib and PDF.js.
  * Strictly 100% Client-Side.
  */
@@ -140,8 +140,8 @@ class PdfCompressorEngine {
       optimizedDoc.setAuthor('');
       optimizedDoc.setSubject('');
       optimizedDoc.setKeywords([]);
-      optimizedDoc.setProducer('DocuShrink Privacy PDF Optimizer');
-      optimizedDoc.setCreator('DocuShrink');
+      optimizedDoc.setProducer('DocuHug Privacy PDF Optimizer');
+      optimizedDoc.setCreator('DocuHug');
 
       const savedBytes = await optimizedDoc.save({ useObjectStreams: true });
       let outputBlob = new Blob([savedBytes], { type: 'application/pdf' });

@@ -1,8 +1,8 @@
-# DocuShrink
+# DocuHug
 
 > **Simple tools for your files. Private by design.**
 
-DocuShrink is an original, privacy-first web application designed for lightning-fast image optimization, format conversion, resizing, cropping, and document management. All file operations execute **100% locally within the user's browser runtime** without uploading files to remote servers or third-party cloud APIs.
+DocuHug is an original, privacy-first web application designed for lightning-fast image optimization, format conversion, resizing, cropping, and document management. All file operations execute **100% locally within the user's browser runtime** without uploading files to remote servers or third-party cloud APIs.
 
 ---
 
@@ -11,7 +11,7 @@ DocuShrink is an original, privacy-first web application designed for lightning-
 ### Phase 1: Core Layout, UI Foundation & SEO Base
 - **Responsive Navigation**: Desktop header with active section tracking and mobile hamburger drawer.
 - **Brand Identity**: Original modern teal/emerald/slate theme with custom vector logo mark.
-- **Homepage Structure**: Hero section with trust badges, Popular Tools grid, Categorized Directory, "Your Files Stay With You" privacy section, 3-step "How It Works", 6-card "Why DocuShrink", accessible FAQ accordion, and footer.
+- **Homepage Structure**: Hero section with trust badges, Popular Tools grid, Categorized Directory, "Your Files Stay With You" privacy section, 3-step "How It Works", 6-card "Why DocuHug", accessible FAQ accordion, and footer.
 - **AdSense Reservation**: 3 layout-stable, non-intrusive placeholder slots preventing Cumulative Layout Shift (CLS).
 - **SEO & Accessibility**: WCAG AA focus outlines, skip link, semantic HTML5, Open Graph tags, canonical links, and Schema.org JSON-LD structured data.
 
@@ -84,7 +84,7 @@ DocuShrink is an original, privacy-first web application designed for lightning-
 2. **Terms of Service (`terms.html`)**:
    - Clear terms outlining permitted use, user ownership of files, technical processing limitations, warranty disclaimers, and limitation of liability.
 3. **About Us (`about.html`)**:
-   - Authentic narrative detailing why DocuShrink was created, its privacy philosophy, and supported workflows without fabricated company details.
+   - Authentic narrative detailing why DocuHug was created, its privacy philosophy, and supported workflows without fabricated company details.
 4. **Contact Us (`contact.html`)**:
    - Direct email contact link with documented domain placeholder (`contact@your-domain.com`), troubleshooting advice, and FAQ shortcuts.
 5. **404 Error Page (`404.html`)**:
@@ -135,7 +135,7 @@ User Device (Browser Memory)
 
 1. **Clone or Navigate to the Project Directory**:
    ```bash
-   cd DocuShrink
+   cd DocuHug
    ```
 
 2. **Start a Local HTTP Server**:
@@ -150,7 +150,7 @@ User Device (Browser Memory)
 
 ## Static Hosting Deployment Guides
 
-DocuShrink is a 100% static web application with zero backend requirements. It can be hosted on any static hosting platform:
+DocuHug is a 100% static web application with zero backend requirements. It can be hosted on any static hosting platform:
 
 ### 1. GitHub Pages (Free)
 1. Push this repository to GitHub (`main` branch).
@@ -176,7 +176,7 @@ DocuShrink is a 100% static web application with zero backend requirements. It c
 ## Google Search Console Setup & SEO Indexing
 
 1. Open [Google Search Console](https://search.google.com/search-console).
-2. Add your production domain property (e.g. `https://docushrink.com`).
+2. Add your production domain property (e.g. `https://docuhug.com`).
 3. Verify domain ownership via DNS TXT record or HTML tag.
 4. Navigate to **Sitemaps**, enter `sitemap.xml`, and submit.
 5. Inspect the homepage URL and request indexing.
@@ -187,7 +187,7 @@ DocuShrink is a 100% static web application with zero backend requirements. It c
 
 - **Browser Memory Limits**: Extremely large files (e.g. multi-gigabyte PDFs or massive photo batches) are constrained by available device memory in the browser sandbox.
 - **Encrypted / Password-Protected PDFs**: Password-protected PDFs cannot be merged, split, or optimized in the client without providing credentials first.
-- **True Compression Dependency**: Pure vector and text PDFs or already heavily-optimized images cannot be reduced further without destructive quality loss; DocuShrink honestly discloses this state rather than faking reduced byte counts.
+- **True Compression Dependency**: Pure vector and text PDFs or already heavily-optimized images cannot be reduced further without destructive quality loss; DocuHug honestly discloses this state rather than faking reduced byte counts.
 
 ---
 
@@ -197,14 +197,14 @@ Before deploying to a public production domain:
 - [ ] **Domain Replacement**: Replace `https://example.com` in all canonical links, Open Graph tags, JSON-LD schemas, `robots.txt`, and `sitemap.xml` with your actual live domain.
 - [ ] **Contact Email**: Replace `contact@your-domain.com` in `contact.html`, `privacy.html`, and `terms.html` with your official contact address.
 - [ ] **AdSense Activation**: When approved for Google AdSense, paste your real AdSense script in `<head>` and ad units into the designated `.ad-placeholder-unit` containers.
-- [ ] See [`PRODUCTION-CHECKLIST.md`](file:///c:/Users/anshu/OneDrive/Desktop/DocuShrink/PRODUCTION-CHECKLIST.md) for full launch instructions.
+- [ ] See [`PRODUCTION-CHECKLIST.md`](file:///c:/Users/anshu/OneDrive/Desktop/DocuHug/PRODUCTION-CHECKLIST.md) for full launch instructions.
 
 ---
 
 ## B.Tech CSE Viva & Project Defense Guide
 
 - **Problem Statement**: Standard online file converters require uploading sensitive files (IDs, photos, signatures) to remote servers, incurring network latency, security risks, and privacy leaks.
-- **Proposed Solution**: DocuShrink executes file manipulation client-side using browser-native APIs, eliminating server overhead and guaranteeing zero data leakage.
+- **Proposed Solution**: DocuHug executes file manipulation client-side using browser-native APIs, eliminating server overhead and guaranteeing zero data leakage.
 - **Key Concepts Demonstrated**:
   1. *Client-Side PDF Manipulation with pdf-lib*: Direct ArrayBuffer binary manipulation, reading object dictionaries, copying page references between documents, and stream compression.
   2. *Asynchronous PDF Rendering with PDF.js*: Using Web Workers to parse PostScript/PDF instruction streams, calculating viewport matrices at variable scale factors, and rendering onto offscreen `HTMLCanvasElement`s.

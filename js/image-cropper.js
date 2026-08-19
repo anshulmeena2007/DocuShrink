@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Image Cropper Engine (Phase 2)
+ * DocuHug — Image Cropper Engine (Phase 2)
  * Interactive Canvas Cropper with Aspect Ratio Locks, Touch/Mouse Handles, and Instant Export.
  * Strictly 100% Client-Side.
  */

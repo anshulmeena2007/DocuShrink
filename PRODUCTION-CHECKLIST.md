@@ -1,6 +1,6 @@
-# DocuShrink — Production Deployment Checklist & Launch Guide
+# DocuHug — Production Deployment Checklist & Launch Guide
 
-This checklist provides step-by-step instructions for deploying DocuShrink to static hosting environments (GitHub Pages, Cloudflare Pages, Netlify, Vercel), configuring custom domains, submitting sitemaps to Google Search Console, and activating future Google AdSense advertising.
+This checklist provides step-by-step instructions for deploying DocuHug to static hosting environments (GitHub Pages, Cloudflare Pages, Netlify, Vercel), configuring custom domains, submitting sitemaps to Google Search Console, and activating future Google AdSense advertising.
 
 ---
 
@@ -10,7 +10,7 @@ Before pushing the codebase to your live public domain, perform a search-and-rep
 
 ### A. Production Domain
 - **Current Placeholder**: `https://example.com`
-- **Target Value**: `https://your-custom-domain.com` (e.g. `https://docushrink.com`)
+- **Target Value**: `https://your-custom-domain.com` (e.g. `https://docuhug.com`)
 - **Files to Update**:
   - `robots.txt` (`Sitemap: https://example.com/sitemap.xml`)
   - `sitemap.xml` (all `<loc>` URLs)
@@ -20,7 +20,7 @@ Before pushing the codebase to your live public domain, perform a search-and-rep
 
 ### B. Contact & Support Email
 - **Current Placeholder**: `contact@your-domain.com`
-- **Target Value**: Your official support email address (e.g. `support@docushrink.com` or `hello@docushrink.com`)
+- **Target Value**: Your official support email address (e.g. `support@docuhug.com` or `hello@docuhug.com`)
 - **Files to Update**:
   - `contact.html` (email card `mailto:` link & displayed text)
   - `privacy.html` (Section 11 contact section)
@@ -30,22 +30,22 @@ Before pushing the codebase to your live public domain, perform a search-and-rep
 
 ## 2. Static Hosting Deployment Options
 
-DocuShrink is a **100% static web application** (HTML5, CSS3, Vanilla JS). It requires **no backend server, no database, and no Node.js runtime**.
+DocuHug is a **100% static web application** (HTML5, CSS3, Vanilla JS). It requires **no backend server, no database, and no Node.js runtime**.
 
 ### Option 1: GitHub Pages (Recommended Free Option)
 1. Initialize a Git repository and push your project to a GitHub repository:
    ```bash
    git init
    git add .
-   git commit -m "Deploy DocuShrink production build"
+   git commit -m "Deploy DocuHug production build"
    git branch -M main
-   git remote add origin https://github.com/your-username/docushrink.git
+   git remote add origin https://github.com/your-username/docuhug.git
    git push -u origin main
    ```
 2. Navigate to **Repository Settings &rarr; Pages**.
 3. Under **Build and deployment &rarr; Source**, select `Deploy from a branch`.
 4. Set branch to `main` and folder to `/(root)`. Click **Save**.
-5. Your website will be live at `https://your-username.github.io/docushrink/` (or your connected custom domain).
+5. Your website will be live at `https://your-username.github.io/docuhug/` (or your connected custom domain).
 
 ### Option 2: Cloudflare Pages (Fast Global CDN)
 1. Log in to the [Cloudflare Dashboard](https://dash.cloudflare.com/) and select **Workers & Pages**.
@@ -73,7 +73,7 @@ DocuShrink is a **100% static web application** (HTML5, CSS3, Vanilla JS). It re
 
 ## 3. Custom Domain & SSL/HTTPS Verification
 
-1. In your static hosting provider's dashboard, add your custom domain (e.g. `docushrink.com` and `www.docushrink.com`).
+1. In your static hosting provider's dashboard, add your custom domain (e.g. `docuhug.com` and `www.docuhug.com`).
 2. Update DNS records at your domain registrar:
    - **Apex domain (`@`)**: Add an `A` record or `ALIAS`/`ANAME` pointing to your host's IP/server.
    - **`www` subdomain**: Add a `CNAME` record pointing to your host's target URL.
@@ -95,7 +95,7 @@ DocuShrink is a **100% static web application** (HTML5, CSS3, Vanilla JS). It re
 
 ## 5. Google AdSense Activation Checklist
 
-DocuShrink was engineered with **AdSense-ready layout stability** (`.ad-placeholder-unit` slots with fixed minimum heights to avoid layout shifts).
+DocuHug was engineered with **AdSense-ready layout stability** (`.ad-placeholder-unit` slots with fixed minimum heights to avoid layout shifts).
 
 When your domain qualifies for Google AdSense:
 1. Apply at [Google AdSense](https://adsense.google.com/).

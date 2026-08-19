@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Image Converter Engine (Phase 2)
+ * DocuHug — Image Converter Engine (Phase 2)
  * Client-Side Format Conversion (JPG, PNG, WebP) with Batch Support and Alpha Transparency Handling.
  * Strictly 100% Client-Side.
  */
@@ -346,7 +346,7 @@ class ImageConverter {
       });
 
       DocuUtils.showToast('Generating ZIP archive...');
-      await DocuUtils.createAndDownloadZip(fileList, 'DocuShrink_Converted_Images.zip');
+      await DocuUtils.createAndDownloadZip(fileList, 'DocuHug_Converted_Images.zip');
       DocuUtils.showToast('ZIP archive downloaded successfully!', 'success');
     } catch (err) {
       DocuUtils.showToast(`ZIP generation failed: ${err.message}`, 'error');

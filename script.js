@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Core Script (Phase 1)
+ * DocuHug — Core Script (Phase 1)
  * Clean, lightweight, fully accessible Vanilla JavaScript.
  * Strictly zero backend, zero analytics trackers, zero eval.
  */

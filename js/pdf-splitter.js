@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Split PDF Engine (Phase 4)
+ * DocuHug — Split PDF Engine (Phase 4)
  * Client-side PDF page extraction and range splitter using pdf-lib, PDF.js, and JSZip.
  * Strictly 100% Client-Side.
  */
@@ -349,7 +349,7 @@ class PdfSplitterEngine {
         filename: f.name,
         blob: f.blob,
       }));
-      await DocuUtils.createAndDownloadZip(fileList, 'DocuShrink_Split_PDFs.zip');
+      await DocuUtils.createAndDownloadZip(fileList, 'DocuHug_Split_PDFs.zip');
     } catch (err) {
       DocuUtils.showToast(`ZIP export failed: ${err.message}`, 'error');
     }

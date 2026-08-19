@@ -1,4 +1,4 @@
-# DocuShrink — Complete Verification & Test Matrix (Phases 1–6 Final QA)
+# DocuHug — Complete Verification & Test Matrix (Phases 1–6 Final QA)
 
 ## Test Environment
 - **Local Development Server**: `http://127.0.0.1:8000`
@@ -132,7 +132,7 @@
 |------|--------------------|--------|--------|
 | `privacy.html` | Client-side execution disclosure, zero cloud retention, third-party disclosures | Truthful, authentic, complete | **PASS** |
 | `terms.html` | Permitted use, user file ownership, compression limitations, warranty disclaimer | Plain-language, legally sound | **PASS** |
-| `about.html` | DocuShrink origin, privacy philosophy, 10 supported workflows | Authentic; zero fake claims | **PASS** |
+| `about.html` | DocuHug origin, privacy philosophy, 10 supported workflows | Authentic; zero fake claims | **PASS** |
 | `contact.html` | Email contact link (`contact@your-domain.com`), troubleshooting guide, FAQ links | Clean email card & FAQ links | **PASS** |
 | `404.html` | User-friendly error message, links back to home and all tools | Functional responsive 404 page | **PASS** |
 

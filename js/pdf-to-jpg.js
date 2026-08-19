@@ -1,5 +1,5 @@
 /**
- * DocuShrink — PDF to JPG Engine (Phase 4)
+ * DocuHug — PDF to JPG Engine (Phase 4)
  * High-performance, client-side PDF-to-JPG image extraction using PDF.js and JSZip.
  * Strictly 100% Client-Side.
  */
@@ -346,7 +346,7 @@ class PdfToJpgEngine {
         filename: img.name,
         blob: img.blob,
       }));
-      await DocuUtils.createAndDownloadZip(fileList, 'DocuShrink_PDF_Pages.zip');
+      await DocuUtils.createAndDownloadZip(fileList, 'DocuHug_PDF_Pages.zip');
     } catch (err) {
       DocuUtils.showToast(`ZIP export failed: ${err.message}`, 'error');
     }

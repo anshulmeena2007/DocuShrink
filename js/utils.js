@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Utility Module (Phase 2)
+ * DocuHug — Utility Module (Phase 2)
  * Shared helper functions for client-side processing, formatting, ZIP packaging, and UI notifications.
  * Strictly 100% Client-Side.
  */
@@ -156,7 +156,7 @@ const DocuUtils = {
   /**
    * Create and trigger a ZIP download of multiple Blobs using JSZip
    */
-  async createAndDownloadZip(fileList, zipFilename = 'DocuShrink_Processed_Files.zip') {
+  async createAndDownloadZip(fileList, zipFilename = 'DocuHug_Processed_Files.zip') {
     if (typeof JSZip === 'undefined') {
       throw new Error('JSZip library is not loaded. Please check your internet connection.');
     }

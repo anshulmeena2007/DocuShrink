@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Image Resizer Engine (Phase 2)
+ * DocuHug — Image Resizer Engine (Phase 2)
  * Client-Side Image Resizing with Aspect Ratio Locking & Percentage Scaling.
  * Strictly 100% Client-Side.
  */

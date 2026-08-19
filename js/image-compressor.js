@@ -1,5 +1,5 @@
 /**
- * DocuShrink — Image Compressor Engine (Phase 2)
+ * DocuHug — Image Compressor Engine (Phase 2)
  * Client-Side Lossy & Lossless Compression with Intelligent Binary Search Target Size Solver.
  * Strictly 100% Client-Side.
  */
@@ -504,7 +504,7 @@ class ImageCompressor {
       });
 
       DocuUtils.showToast('Generating ZIP file...');
-      await DocuUtils.createAndDownloadZip(fileList, 'DocuShrink_Compressed_Images.zip');
+      await DocuUtils.createAndDownloadZip(fileList, 'DocuHug_Compressed_Images.zip');
       DocuUtils.showToast('ZIP archive downloaded successfully!', 'success');
     } catch (err) {
       DocuUtils.showToast(`ZIP generation failed: ${err.message}`, 'error');

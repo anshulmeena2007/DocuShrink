@@ -1,7 +1,5 @@
 # DocuHug Robots.txt
-# Note: Replace https://example.com with your actual production domain before deployment.
-
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://anshulmeena2007.github.io/DocuShrink/sitemap.xml

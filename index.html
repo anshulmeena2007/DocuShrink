@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online File &amp; Image Tools | DocuShrink</title>
+  
+  <!-- SEO Metadata -->
+  <meta name="description" content="DocuShrink provides simple, browser-based tools for images and documents. Compress, resize, convert, crop, and manage your files directly on your device with complete privacy." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/" />
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Online File &amp; Image Tools | DocuShrink" />
+  <meta property="og:description" content="Simple tools for your files. Private by design. Fast, browser-based image and PDF utilities with no registration required." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:image" content="https://example.com/assets/logo.svg" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Online File &amp; Image Tools | DocuShrink" />
+  <meta name="twitter:description" content="Compress, resize, convert, and manage your files with simple browser-based tools. 100% private by design." />
+  <meta name="twitter:image" content="https://example.com/assets/logo.svg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#F0FDFA',
+              100: '#CCFBF1',
+              200: '#99F6E4',
+              300: '#5EEAD4',
+              400: '#2DD4BF',
+              500: '#14B8A6',
+              600: '#0D9488',
+              700: '#0F766E',
+              800: '#115E59',
+              900: '#134E4A',
+              950: '#042F2E',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Core Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://example.com/#website",
+        "url": "https://example.com/",
+        "name": "DocuShrink",
+        "description": "Simple tools for your files. Private by design.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://example.com/#webapp",
+        "name": "DocuShrink File Utilities",
+        "url": "https://example.com/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Free, browser-based document and image tools with client-side processing."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://example.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Are my files uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Whenever a tool supports local execution, your files are processed directly inside your browser and are not uploaded to our servers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is DocuShrink free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All implemented tools on DocuShrink are free to use without any mandatory subscriptions, hidden fees, or registration requirements."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==========================================
+       GLOBAL HEADER
+       ========================================== -->
+  <header class="sticky top-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2 group focus:outline-none" aria-label="DocuShrink Homepage">
+          <img src="assets/logo.svg" alt="DocuShrink Logo" class="h-9 sm:h-11 w-auto" />
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-1 lg:space-x-2" aria-label="Primary Navigation">
+          <a href="#tools" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Tools</a>
+          <a href="#image-tools" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Image Tools</a>
+          <a href="#pdf-tools" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">PDF Tools</a>
+          <a href="#faq" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">FAQ</a>
+          <a href="about.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">About</a>
+          <a href="contact.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Contact</a>
+        </nav>
+
+        <!-- Desktop CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="#popular-tools" class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm hover:shadow transition-all focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="md:hidden menu-hidden px-4 pt-2 pb-4 bg-white border-b border-slate-200 shadow-lg space-y-1">
+      <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Home</a>
+      <a href="#tools" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">All Tools</a>
+      <a href="#image-tools" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Image Tools</a>
+      <a href="#pdf-tools" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">PDF Tools</a>
+      <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">FAQ</a>
+      <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">About Us</a>
+      <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Contact</a>
+      <a href="privacy.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Privacy Policy</a>
+      <a href="terms.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50 hover:text-brand-700">Terms of Service</a>
+      <div class="pt-2 border-t border-slate-100 mt-2">
+        <a href="#popular-tools" class="block w-full text-center px-4 py-2.5 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm">
+          Get Started
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="flex-grow">
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="relative overflow-hidden pt-12 pb-16 md:pt-20 md:pb-24 bg-gradient-to-b from-brand-50/70 via-slate-50 to-slate-50">
+      <!-- Decorative background blur -->
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-200/40 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <!-- Trust Indicators Badge Row -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6">
+          <span class="trust-pill">
+            <svg class="w-4 h-4 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Private
+          </span>
+          <span class="trust-pill">
+            <svg class="w-4 h-4 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Fast
+          </span>
+          <span class="trust-pill">
+            <svg class="w-4 h-4 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+            </svg>
+            No Registration
+          </span>
+        </div>
+
+        <!-- Main Headline -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-5 sm:mb-6">
+          Everything You Need to <br class="hidden sm:inline" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-700 via-brand-600 to-teal-600">Manage Your Files</span>
+        </h1>
+
+        <!-- Supporting Text -->
+        <p class="max-w-2xl mx-auto text-base sm:text-lg lg:text-xl text-slate-600 mb-8 sm:mb-10 leading-relaxed">
+          Compress, convert, resize and organize images and documents with simple browser-based tools.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12">
+          <a href="#tools" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-md hover:shadow-lg transition-all focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+            Explore Tools
+            <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </a>
+          <a href="tools/compress-image.html" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3.5 text-base font-semibold text-brand-800 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl shadow-sm hover:shadow transition-all focus:ring-2 focus:ring-brand-500 focus:ring-offset-2">
+            Compress an Image
+          </a>
+        </div>
+
+        <!-- Original Hero Illustration / Visual Mockup (SVG) -->
+        <div class="relative max-w-3xl mx-auto">
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200/80">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+              <div class="flex items-center gap-4 text-left">
+                <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-lg">
+                  <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-sm font-bold text-slate-800">sample_document.png</h3>
+                  <p class="text-xs text-slate-500">1920 × 1080 • 1.45 MB</p>
+                </div>
+              </div>
+
+              <!-- Animated shrinking indicator -->
+              <div class="flex items-center gap-2 px-3 py-1.5 bg-brand-50 rounded-lg text-brand-700 text-xs font-semibold">
+                <span>Optimizing locally</span>
+                <svg class="w-4 h-4 animate-spin text-brand-600" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </div>
+
+              <div class="flex items-center gap-4 text-right">
+                <div>
+                  <span class="inline-block px-2 py-0.5 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full mb-1">-72%</span>
+                  <p class="text-xs text-slate-500">410 KB • Ready</p>
+                </div>
+                <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TOP AD PLACEHOLDER
+         ========================================== -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="ad-placeholder-unit" aria-label="Advertisement Banner">
+        <span class="ad-placeholder-label">ADVERTISEMENT</span>
+        <span class="ad-placeholder-desc">Reserved Ad Slot — 728×90 Leaderboard / Responsive</span>
+        <!-- Future Google AdSense placement -->
+      </div>
+    </div>
+
+    <!-- ==========================================
+         POPULAR TOOLS SECTION
+         ========================================== -->
+    <section id="popular-tools" class="py-12 sm:py-16 bg-white border-y border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-brand-100 text-brand-800 mb-3">
+            Most Used
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Popular Tools</h2>
+          <p class="mt-2 text-base text-slate-600">The most frequently needed file utilities, ready instantly in your browser.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- 1. Compress Image -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-brand-600">Image Tool</span>
+              <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Compress Image</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Reduce JPG, PNG and WebP file sizes quickly with real-time compression controls.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-500">100% Client-Side</span>
+              <a href="tools/compress-image.html" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                Open Tool <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. Resize Image -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-brand-600">Image Tool</span>
+              <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Resize Image</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Change image dimensions in pixels or percentage with aspect ratio constraints.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-500">Instant Canvas</span>
+              <a href="tools/resize-image.html" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                Open Tool <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3. JPG to PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600">PDF Tool</span>
+              <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">JPG to PDF</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Convert JPG photos and graphics into a standardized, clean PDF document.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-500">Multi-page support</span>
+              <a href="tools/jpg-to-pdf.html" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                Open Tool <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Image to PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600">PDF Tool</span>
+              <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Image to PDF</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Combine multiple images (JPG, PNG, WebP) into an organized PDF file with page ordering.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-500">A4 / Custom margins</span>
+              <a href="tools/image-to-pdf.html" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                Open Tool <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 5. Merge PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600">PDF Tool</span>
+              <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">Merge PDF</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Combine multiple PDF documents into a single organized file in your desired order.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-500">Local aggregation</span>
+              <a href="tools/merge-pdf.html" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                Open Tool <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- 6. PDF to JPG -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card relative flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600">PDF Tool</span>
+              <h3 class="text-lg font-bold text-slate-900 mt-1 mb-2">PDF to JPG</h3>
+              <p class="text-sm text-slate-600 leading-relaxed">Render PDF document pages into high-resolution JPG images with ZIP archive download.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-medium text-slate-500">Page-by-page render</span>
+              <a href="tools/pdf-to-jpg.html" class="text-sm font-bold text-brand-600 hover:text-brand-800 flex items-center gap-1">
+                Open Tool <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ALL TOOLS DIRECTORY
+         ========================================== -->
+    <div id="tools" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- IMAGE TOOLS SECTION -->
+      <section id="image-tools" class="mb-16">
+        <div class="flex items-center justify-between mb-8 pb-3 border-b border-slate-200">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-brand-600 inline-block"></span>
+              Image Tools
+            </h2>
+            <p class="text-sm text-slate-600 mt-1">Direct client-side utilities to optimize, resize, convert, and crop images.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- 1. Compress Image -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Compress Image</h3>
+              <p class="text-sm text-slate-600">Reduce JPG, PNG, and WebP file size with quality control and target size presets.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Presets: ~50KB, 100KB</span>
+              <a href="tools/compress-image.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. Resize Image -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Resize Image</h3>
+              <p class="text-sm text-slate-600">Change image width and height with pixel inputs or preset percentages.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Lock Aspect Ratio</span>
+              <a href="tools/resize-image.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. Convert Image -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Convert Image</h3>
+              <p class="text-sm text-slate-600">Convert effortlessly between JPG, PNG, and modern WebP formats.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Batch Processing</span>
+              <a href="tools/convert-image.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. Crop Image -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 2v5h5M17 22v-5h-5M2 7h5v12a2 2 0 002 2h12M22 17h-5V5a2 2 0 00-2-2H3" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Crop Image</h3>
+              <p class="text-sm text-slate-600">Crop images visually with an interactive canvas and aspect presets.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">1:1, 4:3, 16:9, Free</span>
+              <a href="tools/crop-image.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. Image to PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Image to PDF</h3>
+              <p class="text-sm text-slate-600">Convert single or multiple images into a standard PDF document.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Page Sorting</span>
+              <a href="tools/image-to-pdf.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- PDF TOOLS SECTION -->
+      <section id="pdf-tools" class="mb-16">
+        <div class="flex items-center justify-between mb-8 pb-3 border-b border-slate-200">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-emerald-600 inline-block"></span>
+              PDF Tools
+            </h2>
+            <p class="text-sm text-slate-600 mt-1">Client-side document management and page manipulation utilities.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- 1. Merge PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Merge PDF</h3>
+              <p class="text-sm text-slate-600">Combine multiple PDF files into one complete document locally in your browser.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Drag &amp; Drop Reorder</span>
+              <a href="tools/merge-pdf.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 2. Split PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Split PDF</h3>
+              <p class="text-sm text-slate-600">Extract selected PDF pages or page ranges into separate PDF files.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Custom Ranges (e.g. 1-3)</span>
+              <a href="tools/split-pdf.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 3. PDF to JPG -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">PDF to JPG</h3>
+              <p class="text-sm text-slate-600">Render PDF document pages into crisp JPG images without sending data to servers.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Export as ZIP</span>
+              <a href="tools/pdf-to-jpg.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 4. JPG to PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">JPG to PDF</h3>
+              <p class="text-sm text-slate-600">Turn JPG photographs and images into standard printable PDF files.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Letter &amp; A4 formatting</span>
+              <a href="tools/jpg-to-pdf.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+          <!-- 5. Compress PDF -->
+          <article class="bg-white rounded-xl border border-slate-200 p-6 transition-card flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-1">Compress PDF</h3>
+              <p class="text-sm text-slate-600">Attempt client-side PDF size optimization with honest reduction metrics.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-500">Stream Optimization</span>
+              <a href="tools/compress-pdf.html" class="text-sm font-semibold text-brand-600 hover:text-brand-800">Open Tool &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- COMING SOON SECTION -->
+      <section id="coming-soon" class="mb-16">
+        <div class="flex items-center justify-between mb-8 pb-3 border-b border-slate-200">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-slate-400 inline-block"></span>
+              Coming Soon
+            </h2>
+            <p class="text-sm text-slate-600 mt-1">Additional tools planned for future releases. These tools are currently under development.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">OCR (Text Extraction)</h3>
+            <p class="text-xs text-slate-500">Extract editable text from scanned documents and photos.</p>
+          </div>
+
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">PDF to Word</h3>
+            <p class="text-xs text-slate-500">Convert PDF files into editable Microsoft Word (.docx) files.</p>
+          </div>
+
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">PDF to Excel</h3>
+            <p class="text-xs text-slate-500">Extract document tables directly into spreadsheet formats.</p>
+          </div>
+
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">PDF Watermark</h3>
+            <p class="text-xs text-slate-500">Add custom text or image watermarks to document pages.</p>
+          </div>
+
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">PDF Page Numbers</h3>
+            <p class="text-xs text-slate-500">Insert custom page numbers in headers and footers.</p>
+          </div>
+
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">Document Scanner</h3>
+            <p class="text-xs text-slate-500">Detect document edges and perspective correct photos.</p>
+          </div>
+
+          <div class="bg-slate-50/80 border border-slate-200 rounded-xl p-5 card-coming-soon cursor-pointer hover:border-slate-300 transition-colors">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block px-2 py-0.5 text-xs font-bold uppercase rounded bg-slate-200 text-slate-700">Coming Soon</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-700 mb-1">Background Remover</h3>
+            <p class="text-xs text-slate-500">Isolate subjects with client-side image segmentation.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==========================================
+         PRIVACY / TRUST SECTION
+         ========================================== -->
+    <section id="privacy-trust" class="py-16 bg-slate-900 text-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-500/20 text-brand-300 border border-brand-500/30 mb-4">
+            Privacy Architecture
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Your Files Stay With You</h2>
+          <p class="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+            DocuShrink is engineered with a strict privacy-first philosophy. Whenever a tool supports local execution, your files are processed directly inside your browser using modern Web APIs. No file uploads to third-party processing servers, no account logins, and no hidden document copies.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">No Account Required</h3>
+            <p class="text-sm text-slate-300">Access every core tool immediately without creating accounts, providing passwords, or giving up email addresses.</p>
+          </div>
+
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Client-Side Processing</h3>
+            <p class="text-sm text-slate-300">Files reside in your device's local memory during compression, resizing, and manipulation via native browser APIs.</p>
+          </div>
+
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Local Downloads</h3>
+            <p class="text-sm text-slate-300">Optimized outputs and archives are saved directly to your local file system via in-memory Object URLs.</p>
+          </div>
+
+          <div class="bg-slate-800/80 border border-slate-700/60 rounded-xl p-6">
+            <div class="w-10 h-10 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">No File Storage</h3>
+            <p class="text-sm text-slate-300">Because files are never uploaded to a backend database, there is zero server-side storage or retention risk.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         HOW IT WORKS SECTION
+         ========================================== -->
+    <section id="how-it-works" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">How It Works</h2>
+          <p class="mt-2 text-base text-slate-600">Three straightforward steps to process your files in seconds.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200/80 flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mb-4 shadow-sm">
+              1
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Choose a Tool</h3>
+            <p class="text-sm text-slate-600">Select the exact operation you need: compression, resizing, format conversion, cropping, or PDF manipulation.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200/80 flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mb-4 shadow-sm">
+              2
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Add Your Files</h3>
+            <p class="text-sm text-slate-600">Select or drag-and-drop your image or document files directly from your computer, tablet, or smartphone.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center p-6 bg-slate-50 rounded-xl border border-slate-200/80 flex flex-col items-center">
+            <div class="w-12 h-12 rounded-full bg-brand-600 text-white font-bold text-lg flex items-center justify-center mb-4 shadow-sm">
+              3
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Process &amp; Download</h3>
+            <p class="text-sm text-slate-600">Adjust any desired quality or dimension settings, process instantly in the browser, and download the clean output.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         WHY DOCUSHRINK SECTION
+         ========================================== -->
+    <section id="why-docushrink" class="py-16 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Why Choose DocuShrink?</h2>
+          <p class="mt-2 text-base text-slate-600">Designed from the ground up for speed, simplicity, and complete privacy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4 font-bold">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Privacy First</h3>
+            <p class="text-sm text-slate-600">Client-side processing whenever possible keeps your personal documents and private photos safely on your device.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4 font-bold">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">No Registration</h3>
+            <p class="text-sm text-slate-600">No account forms, no passwords to remember, and no email verification delays. Just open and use immediately.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4 font-bold">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Blazing Fast</h3>
+            <p class="text-sm text-slate-600">By eliminating time-consuming upload queues to remote servers, file transformations finish almost instantaneously.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4 font-bold">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Intuitive &amp; Simple</h3>
+            <p class="text-sm text-slate-600">No complicated technical jargon or overwhelming desktop software. Clean interfaces designed for everyone.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4 font-bold">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Multiple Tools in One</h3>
+            <p class="text-sm text-slate-600">From image resizing to multi-document PDF merging, access all essential daily utility tools in a single hub.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="w-10 h-10 rounded-lg bg-teal-50 text-brand-600 flex items-center justify-center mb-4 font-bold">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Mobile Friendly</h3>
+            <p class="text-sm text-slate-600">Fully responsive design that works seamlessly across smartphones, tablets, laptops, and ultra-wide desktop monitors.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         MIDDLE AD PLACEHOLDER
+         ========================================== -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 my-4">
+      <div class="ad-placeholder-unit" aria-label="Advertisement Banner">
+        <span class="ad-placeholder-label">ADVERTISEMENT</span>
+        <span class="ad-placeholder-desc">Reserved Ad Slot — In-Feed / Content Banner</span>
+        <!-- Future Google AdSense placement -->
+      </div>
+    </div>
+
+    <!-- ==========================================
+         SEO CONTENT SECTION
+         ========================================== -->
+    <section class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate">
+        
+        <div class="text-center mb-10">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Understanding Browser-Based File Utilities</h2>
+          <p class="text-slate-600 mt-2">How DocuShrink combines modern browser standards with lightweight, private document tools.</p>
+        </div>
+
+        <div class="space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Efficient Image Compression &amp; Optimization</h3>
+            <p>
+              Digital images captured on modern smartphones and digital cameras frequently exceed several megabytes in file size. Whether you need to upload identity verification documents, email application forms, or optimize web assets, large image files can cause upload timeouts and storage bottlenecks. DocuShrink leverages native HTML5 Canvas rendering and lossy encoding algorithms to compress JPG and WebP images efficiently without noticeable degradation in visual quality. For PNG files, lossless structure optimization ensures clean graphics and transparent backgrounds remain sharp.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Flexible Image Resizing &amp; Format Conversion</h3>
+            <p>
+              Standardizing file formats and dimensions is essential for web publishing and official form submissions. With DocuShrink’s image resizer, users can scale image dimensions by exact pixel measurements or percentage steps while maintaining the original aspect ratio. The format converter enables seamless cross-conversion between JPG, PNG, and modern WebP image formats, providing batch processing capabilities and ZIP archive downloads.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">Seamless PDF Management &amp; Page Organization</h3>
+            <p>
+              Managing PDF documents does not require complex desktop software suites. DocuShrink provides intuitive utilities to combine multiple PDF documents into a single organized file, extract specific page ranges with the PDF splitter, convert multiple photos into standard A4 or Letter PDF sheets, and render PDF pages into high-resolution JPG images.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-slate-900 mb-3">The Advantage of 100% Client-Side Processing</h3>
+            <p>
+              Traditional online converters require users to upload sensitive personal files, invoices, and IDs to remote servers, where files may be queued, processed, and temporarily stored. DocuShrink processes supported file operations directly inside your browser's runtime memory. Your files never leave your device, ensuring maximum confidentiality and immediate processing speeds.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FAQ SECTION (ACCORDION)
+         ========================================== -->
+    <section id="faq" class="py-16 bg-slate-50 border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-100 text-brand-800 mb-3">
+            Questions &amp; Answers
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+          <p class="mt-2 text-base text-slate-600">Everything you need to know about how DocuShrink operates.</p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- Q1 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Are my files uploaded to any server?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              No. Whenever a tool supports local execution, DocuShrink executes file operations directly inside your web browser using HTML5 Canvas, Blob, and local JavaScript libraries. Your files remain on your device and are not uploaded to a backend processing server.
+            </div>
+          </details>
+
+          <!-- Q2 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Is DocuShrink free to use?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              Yes. All implemented tools on DocuShrink are free to use without any mandatory subscriptions, hidden fees, or registration requirements.
+            </div>
+          </details>
+
+          <!-- Q3 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>What image formats are supported?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              DocuShrink supports common standard web image formats, including JPG (JPEG), PNG, and modern WebP files for compression, conversion, resizing, and cropping.
+            </div>
+          </details>
+
+          <!-- Q4 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Can I compress images to an approximate target size like ~50 KB?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              Yes. The image compressor features target-size presets (~50 KB, ~100 KB, ~200 KB) that intelligently balance quality and resolution to approximate your target without making misleading exact-size guarantees.
+            </div>
+          </details>
+
+          <!-- Q5 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Can I use DocuShrink for exam or government portal application forms?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              Yes, our tools are ideal for preparing photos, signatures, and certificates according to size restrictions. However, always check the specific application portal's current guidelines and verify the output dimensions and file size before final submission.
+            </div>
+          </details>
+
+          <!-- Q6 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Can I process multiple files at the same time?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              Yes. Batch processing is supported across compression, image conversion, image-to-PDF, and PDF page rendering tools, with convenient single-click ZIP archive downloads.
+            </div>
+          </details>
+
+          <!-- Q7 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Is PDF processing private?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              Yes. Implemented PDF tools (such as Merge PDF, Split PDF, and PDF to JPG) execute locally in your browser using client-side JavaScript PDF engines.
+            </div>
+          </details>
+
+          <!-- Q8 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Why might a PDF not become smaller after compression?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              PDF file size depends heavily on its internal content. PDFs consisting purely of vector text or already compressed images cannot be reduced further without raster quality loss. DocuShrink honestly reports achievable size reductions rather than fabricating results.
+            </div>
+          </details>
+
+          <!-- Q9 -->
+          <details class="group bg-white rounded-xl border border-slate-200 p-5 shadow-sm">
+            <summary class="flex items-center justify-between font-bold text-slate-900 text-base sm:text-lg select-none">
+              <span>Does PNG support lossy quality compression?</span>
+              <span class="ml-4 flex-shrink-0 text-slate-400 group-hover:text-brand-600 accordion-chevron">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              PNG is inherently a lossless format designed to preserve exact pixels and alpha transparency. As such, quality sliders do not apply to PNG in the same way they do to JPG or WebP. To reduce a PNG's size significantly, converting to WebP or resizing dimensions is recommended.
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT SECTION / AUTHENTIC STATEMENT
+         ========================================== -->
+    <section id="about-section" class="py-16 bg-white border-t border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-100 text-brand-800 mb-3">
+          Our Mission
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">About DocuShrink</h2>
+        <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          DocuShrink is created to provide everyday file utilities that are fast, accessible, and respectful of personal privacy. By utilizing the computational power of modern web browsers, we make common document and image workflows seamless without requiring cloud uploads or user tracking.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BOTTOM AD PLACEHOLDER
+         ========================================== -->
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 my-6">
+      <div class="ad-placeholder-unit" aria-label="Advertisement Banner">
+        <span class="ad-placeholder-label">ADVERTISEMENT</span>
+        <span class="ad-placeholder-desc">Reserved Ad Slot — Bottom Leaderboard / Responsive</span>
+        <!-- Future Google AdSense placement -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==========================================
+       PROFESSIONAL FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold text-white tracking-tight">Docu<span class="text-brand-400">Shrink</span></span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 max-w-sm leading-relaxed">
+            Simple tools for your files. Private by design. Fast client-side image compression, format conversion, resizing, and PDF utilities directly in your browser.
+          </p>
+          <div class="text-xs text-slate-400">
+            <span>Built with modern Web Standards • 100% Client-Side</span>
+          </div>
+        </div>
+
+        <!-- Image Tools Links -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Image Tools</h3>
+          <ul class="space-y-2">
+            <li><a href="tools/compress-image.html" class="hover:text-white transition-colors">Compress Image</a></li>
+            <li><a href="tools/resize-image.html" class="hover:text-white transition-colors">Resize Image</a></li>
+            <li><a href="tools/convert-image.html" class="hover:text-white transition-colors">Convert Image</a></li>
+            <li><a href="tools/crop-image.html" class="hover:text-white transition-colors">Crop Image</a></li>
+            <li><a href="tools/image-to-pdf.html" class="hover:text-white transition-colors">Image to PDF</a></li>
+          </ul>
+        </div>
+
+        <!-- PDF Tools Links -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">PDF Tools</h3>
+          <ul class="space-y-2">
+            <li><a href="tools/merge-pdf.html" class="hover:text-white transition-colors">Merge PDF</a></li>
+            <li><a href="tools/split-pdf.html" class="hover:text-white transition-colors">Split PDF</a></li>
+            <li><a href="tools/pdf-to-jpg.html" class="hover:text-white transition-colors">PDF to JPG</a></li>
+            <li><a href="tools/jpg-to-pdf.html" class="hover:text-white transition-colors">JPG to PDF</a></li>
+            <li><a href="tools/compress-pdf.html" class="hover:text-white transition-colors">Compress PDF</a></li>
+          </ul>
+        </div>
+
+        <!-- Informational Links -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">About &amp; Help</h3>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+            <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Help &amp; FAQ</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal Links -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Legal &amp; Privacy</h3>
+          <ul class="space-y-2">
+            <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="#privacy-trust" class="hover:text-white transition-colors">Privacy Architecture</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Bar -->
+      <div class="mt-12 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <p>&copy; 2026 DocuShrink. All rights reserved.</p>
+        <p class="text-slate-400">All file processing occurs locally on your device.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

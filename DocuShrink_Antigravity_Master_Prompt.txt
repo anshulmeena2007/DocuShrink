@@ -1,0 +1,1610 @@
+DOCUSHRINK — COMPLETE PRODUCTION-READY WEB APPLICATION
+
+You are an expert senior full-stack web engineer, frontend engineer, JavaScript engineer, UI/UX designer, accessibility specialist, SEO specialist, performance engineer, security engineer, and QA engineer.
+
+Your task is to BUILD, RUN, TEST, FIX, VERIFY, AND DOCUMENT a complete production-ready website called:
+
+DocuShrink
+
+Tagline:
+Simple tools for your files. Private by design.
+
+The website should be an original online file/document/image utility platform inspired by the general concept of multi-tool websites such as iLovePDF, but it must NOT copy their branding, logo, colors, text, layout, illustrations, source code, or proprietary design.
+
+Create a completely original DocuShrink identity and user experience.
+
+==================================================
+1. PRODUCT VISION
+==================================================
+
+DocuShrink is a collection of easy-to-use online utilities for images and documents.
+
+Core philosophy:
+Fast tools. Simple interface. Privacy-first processing.
+
+Whenever technically possible, files should be processed entirely inside the user's browser.
+
+There must be:
+- No unnecessary backend
+- No image upload server
+- No account requirement
+- No registration requirement
+- No unnecessary database
+- No server-side storage of user files
+
+The initial version should prioritize tools that can reliably run client-side.
+
+==================================================
+2. ARCHITECTURE
+==================================================
+
+Build the application as a static/client-side web application wherever possible.
+
+Use browser APIs for local processing:
+- File API
+- Blob API
+- Canvas API
+- URL.createObjectURL()
+- FileReader
+- Web Workers where useful
+- JSZip for ZIP creation
+- PDF.js where appropriate for client-side PDF rendering
+- pdf-lib where appropriate for PDF manipulation
+
+Do not create a backend simply because a feature is difficult.
+
+If a feature cannot reliably be implemented client-side, clearly mark it as:
+Coming Soon
+
+Never pretend a non-functional feature works.
+
+==================================================
+3. TECH STACK
+==================================================
+
+Preferred:
+- HTML5
+- Modern CSS
+- Tailwind CSS
+- Vanilla JavaScript
+
+External libraries may be loaded through CDN when genuinely useful.
+
+Recommended libraries:
+- JSZip
+- pdf-lib
+- PDF.js
+
+Do NOT use:
+- React
+- Angular
+- Vue
+- Next.js
+- unnecessary frameworks
+- PHP backend
+- Python backend
+- Express backend
+- database
+- authentication backend
+
+The project must remain easy for a B.Tech CSE student to understand and maintain.
+
+==================================================
+4. PROJECT STRUCTURE
+==================================================
+
+Create a clean structure similar to:
+
+DocuShrink/
+├── index.html
+├── style.css
+├── script.js
+├── tools/
+│   ├── compress-image.html
+│   ├── resize-image.html
+│   ├── convert-image.html
+│   ├── crop-image.html
+│   ├── image-to-pdf.html
+│   ├── merge-pdf.html
+│   ├── split-pdf.html
+│   ├── pdf-to-jpg.html
+│   └── compress-pdf.html
+├── js/
+│   ├── image-compressor.js
+│   ├── image-resizer.js
+│   ├── image-converter.js
+│   ├── image-cropper.js
+│   ├── image-to-pdf.js
+│   ├── pdf-tools.js
+│   └── utils.js
+├── assets/
+│   ├── logo.svg
+│   ├── favicon.svg
+│   └── icons/
+├── tests/
+│   └── test-results.md
+├── robots.txt
+├── sitemap.xml
+└── README.md
+
+If a different structure is technically cleaner, use it, but maintain modular separation.
+
+==================================================
+5. BRAND IDENTITY
+==================================================
+
+Brand:
+DocuShrink
+
+Tagline:
+Simple tools for your files. Private by design.
+
+Supporting message:
+Compress, convert, resize and manage your files directly in your browser.
+
+Brand personality:
+- Modern
+- Clean
+- Friendly
+- Fast
+- Trustworthy
+- Professional
+- Privacy-first
+- Student-friendly
+
+Create an original logo using a simple document/file + shrink/compression visual concept.
+
+Do not imitate iLovePDF's visual identity.
+
+==================================================
+6. GLOBAL HEADER
+==================================================
+
+Create a polished responsive header.
+
+Desktop:
+[DocuShrink]    Tools    Image Tools    PDF Tools    FAQ    About    [Get Started]
+
+Mobile:
+Use a responsive hamburger/menu.
+
+Header must be:
+- clean
+- lightweight
+- accessible
+- responsive
+
+==================================================
+7. HOMEPAGE HERO
+==================================================
+
+Headline:
+Everything You Need to Manage Your Files
+
+Supporting text:
+Compress, convert, resize and organize images and documents with simple browser-based tools.
+
+Trust message:
+Private • Fast • No Registration
+
+Primary button:
+Explore Tools
+
+Secondary button:
+Compress an Image
+
+Add a subtle original visual representing documents and images.
+
+Do not use copyrighted illustrations.
+
+==================================================
+8. TOOL DIRECTORY
+==================================================
+
+Create a beautiful grid of tools grouped by category.
+
+IMAGE TOOLS
+
+1. Compress Image
+Reduce JPG, PNG and WebP file size.
+
+2. Resize Image
+Change image width and height.
+
+3. Convert Image
+Convert between JPG, PNG and WebP.
+
+4. Crop Image
+Crop images visually with an interactive crop area.
+
+5. Image to PDF
+Convert one or multiple images into a PDF.
+
+PDF TOOLS
+
+6. Merge PDF
+Combine multiple PDF files.
+
+7. Split PDF
+Extract selected PDF pages into separate files.
+
+8. PDF to JPG
+Render PDF pages as JPG images.
+
+9. JPG to PDF
+Convert images into PDF.
+
+10. Compress PDF
+Attempt client-side PDF size optimization where technically possible.
+
+If compression cannot reliably reduce a particular PDF, clearly explain the limitation.
+
+FUTURE TOOLS
+
+Create visually consistent cards marked:
+Coming Soon
+
+Potential future tools:
+- PDF Watermark
+- PDF Page Numbers
+- Protect PDF
+- Unlock PDF
+- PDF to Word
+- PDF to PNG
+- Document Scanner
+- OCR
+- Image Background Remover
+
+Do not pretend these tools are functional.
+
+==================================================
+9. TOOL CARD DESIGN
+==================================================
+
+Every tool card should contain:
+- Icon
+- Tool name
+- One-line description
+- Category
+- Hover state
+- Clickable area
+- Keyboard accessibility
+
+Example:
+[Compression Icon]
+Compress Image
+Reduce JPG, PNG and WebP file sizes quickly.
+Open Tool →
+
+==================================================
+10. FEATURED TOOL
+==================================================
+
+On the homepage, feature:
+Compress Image
+
+This should be the most complete tool in version 1.
+
+Create a large compressor interface.
+
+==================================================
+11. IMAGE COMPRESSOR
+==================================================
+
+Support:
+- JPG
+- JPEG
+- PNG
+- WebP
+
+Support:
+- Single upload
+- Multiple upload
+- Drag and drop
+
+Upload area:
+Drop your images here
+or
+[Choose Images]
+JPG • PNG • WebP
+
+All processing must happen locally.
+
+==================================================
+12. IMAGE COMPRESSION CONTROLS
+==================================================
+
+Quality slider:
+10% to 100%
+
+Default:
+80%
+
+Show:
+Quality: 80%
+
+For JPG and WebP, quality must actually affect compression.
+
+For PNG, do not pretend the quality slider works the same way.
+
+Display:
+PNG uses lossless compression; quality adjustment is not applicable.
+
+==================================================
+13. TARGET SIZE PRESETS
+==================================================
+
+Add:
+- Compress to ~50 KB
+- Compress to ~100 KB
+- Compress to ~200 KB
+
+Implement intelligent target-size compression.
+
+Approach:
+1. Generate image.
+2. Measure Blob size.
+3. Adjust quality.
+4. Use binary-search-like optimization.
+5. If quality reduction is insufficient, reduce dimensions.
+6. Generate again.
+7. Continue until a reasonable result is reached.
+
+Do not guarantee exact file size.
+
+Display:
+Target size: ~100 KB
+Result: 94 KB
+
+If target cannot reasonably be reached:
+Best achievable result: 126 KB
+
+Never fake file sizes.
+
+==================================================
+14. OUTPUT FORMAT
+==================================================
+
+Options:
+- Maintain Original
+- JPG
+- PNG
+- WebP
+
+Use real MIME types.
+
+Do not change the displayed extension without actually generating the corresponding format.
+
+==================================================
+15. IMAGE PREVIEW
+==================================================
+
+After upload, show:
+- thumbnail
+- filename
+- format
+- dimensions
+- original size
+
+After compression show:
+- compressed preview
+- compressed dimensions
+- compressed format
+- compressed size
+- reduction percentage
+
+Example:
+Original
+1920 × 1080
+1.42 MB
+
+↓
+
+Compressed
+1920 × 1080
+420 KB
+
+-70%
+Saved 1.00 MB
+
+==================================================
+16. BATCH PROCESSING
+==================================================
+
+If multiple images are selected:
+Display:
+5 images selected
+
+Process each independently.
+
+Show progress:
+Processing 3 of 5
+
+Use asynchronous processing.
+
+Do not freeze the browser unnecessarily.
+
+==================================================
+17. DOWNLOADS
+==================================================
+
+Provide:
+
+Download Compressed Image
+For a single selected result.
+
+Download All as ZIP
+Use JSZip.
+
+Create a ZIP containing all successful results.
+
+Example:
+photo-compressed.jpg
+passport-compressed.jpg
+signature-compressed.png
+
+Reset
+Reset the entire tool.
+
+Revoke Blob URLs when appropriate.
+
+==================================================
+18. IMAGE RESIZER
+==================================================
+
+Create a fully functional client-side image resizer.
+
+Features:
+- Upload image
+- Width
+- Height
+- Lock aspect ratio
+- Percentage scaling
+- Preset dimensions
+- JPG/PNG/WebP output
+- Quality control where applicable
+- Preview
+- Original dimensions
+- Output dimensions
+- Download
+
+Presets may include:
+- 25%
+- 50%
+- 75%
+- 100%
+- Custom
+
+==================================================
+19. IMAGE CONVERTER
+==================================================
+
+Create:
+Convert Image
+
+Input:
+- JPG
+- PNG
+- WebP
+
+Output:
+- JPG
+- PNG
+- WebP
+
+Allow batch conversion.
+
+Show original and output format.
+
+Provide individual and ZIP downloads.
+
+==================================================
+20. IMAGE CROPPER
+==================================================
+
+Create:
+Crop Image
+
+Features:
+- Upload
+- Interactive crop area
+- Free crop
+- Square
+- 4:3
+- 16:9
+- Portrait
+- Reset crop
+- Preview
+- Download
+
+Use Canvas.
+
+Make it mobile friendly.
+
+==================================================
+21. IMAGE TO PDF
+==================================================
+
+Create:
+Image to PDF
+
+Support:
+- JPG
+- PNG
+- WebP where browser conversion is required
+
+Allow multiple images.
+
+Features:
+- Reorder images
+- Page size: A4, Letter, Original ratio
+- Orientation: Portrait, Landscape
+- Margin
+- Fit mode
+
+Generate PDF client-side where possible using pdf-lib.
+
+Provide:
+Download PDF
+
+==================================================
+22. JPG TO PDF
+==================================================
+
+Provide a convenient route to the same Image-to-PDF engine.
+
+Create SEO-friendly page title and content for:
+JPG to PDF Converter
+
+==================================================
+23. MERGE PDF
+==================================================
+
+Use pdf-lib where technically supported.
+
+Allow:
+- Multiple PDF upload
+- Drag-and-drop
+- Reordering
+- Remove selected file
+- Merge
+- Download
+
+All processing should happen locally.
+
+If browser limitations prevent reliable operation for a specific PDF, provide a clear error.
+
+==================================================
+24. SPLIT PDF
+==================================================
+
+Allow:
+- Upload PDF
+- Display page count
+- Select page ranges
+
+Examples:
+1-3
+5
+7-10
+
+Generate output PDFs locally where possible.
+
+Provide:
+Download Split PDF
+
+==================================================
+25. PDF TO JPG
+==================================================
+
+Use PDF.js for client-side rendering.
+
+Allow:
+- Upload PDF
+- Select page
+- Convert all pages
+- JPG quality control
+- Download individual JPG
+- Download all as ZIP
+
+Do not upload PDFs to a server.
+
+==================================================
+26. PDF COMPRESSION
+==================================================
+
+Implement a realistic client-side PDF optimization approach.
+
+Do NOT claim every PDF can be significantly compressed.
+
+If optimization produces no meaningful reduction:
+This PDF is already optimized or cannot be reduced further using browser-based processing.
+
+Compare:
+- Original size
+- Output size
+- Percentage saved
+
+Never fake the result.
+
+==================================================
+27. GLOBAL FILE DROP COMPONENT
+==================================================
+
+Create a reusable file-upload component.
+
+Requirements:
+- Drag and drop
+- Click to upload
+- Keyboard accessible
+- File type validation
+- File count
+- File size display
+- Error handling
+
+Make it reusable across tools.
+
+==================================================
+28. PRIVACY MODEL
+==================================================
+
+Create a major trust section:
+
+Your Files Stay With You
+
+Explain:
+DocuShrink is designed around browser-based processing. Whenever a tool supports local processing, your files are processed directly on your device instead of being uploaded to a server.
+
+Include:
+- No account required
+- No image upload server
+- Client-side processing
+- Local downloads
+- No unnecessary file storage
+
+Do not make absolute claims about third-party services such as hosting, analytics, CDN providers, or future advertising.
+
+==================================================
+29. HOW IT WORKS
+==================================================
+
+Create three steps:
+
+1. Choose a Tool
+Select the file operation you need.
+
+2. Add Your Files
+Upload files directly from your device.
+
+3. Process & Download
+Process them and download the result.
+
+==================================================
+30. WHY DOCUSHRINK
+==================================================
+
+Create six feature cards:
+
+Privacy First
+Client-side processing whenever possible.
+
+No Registration
+Use the tools without creating an account.
+
+Fast
+Browser-based processing reduces unnecessary upload steps.
+
+Simple
+No complicated software required.
+
+Multiple Tools
+Images and PDF utilities in one place.
+
+Mobile Friendly
+Works across phones, tablets and desktops.
+
+==================================================
+31. SEO CONTENT
+==================================================
+
+Create useful, human-written SEO content.
+
+Target naturally:
+- image compressor
+- image resize
+- JPG compressor
+- PNG compressor
+- WebP converter
+- JPG to PDF
+- image to PDF
+- merge PDF
+- split PDF
+- PDF to JPG
+- compress PDF
+- online file tools
+- image compression
+- reduce image size
+
+Do NOT keyword stuff.
+
+==================================================
+32. SEO METADATA
+==================================================
+
+Every major tool page must have:
+- unique title
+- meta description
+- canonical URL
+- robots metadata
+- Open Graph title
+- Open Graph description
+- Open Graph image placeholder
+
+Example:
+Compress Image Online | DocuShrink
+
+Create natural descriptions.
+
+==================================================
+33. STRUCTURED DATA
+==================================================
+
+Use appropriate JSON-LD.
+
+Potential schemas:
+- WebSite
+- WebApplication
+- SoftwareApplication
+- FAQPage
+
+Only use schemas that accurately describe the website.
+
+Do not create fake:
+- reviews
+- ratings
+- testimonials
+- organizations
+
+==================================================
+34. FAQ
+==================================================
+
+Create a polished accordion.
+
+Questions:
+
+Are my files uploaded?
+Explain client-side processing accurately.
+
+Is DocuShrink free?
+Answer according to the implemented product.
+
+What image formats are supported?
+JPG, PNG, WebP.
+
+Can I compress images to 50 KB?
+Explain approximate target compression.
+
+Can I use it for exam/application forms?
+Explain that users should always check the specific portal's current requirements.
+
+Can I process multiple files?
+Yes, for supported tools.
+
+Is PDF processing private?
+Explain which PDF tools operate locally and avoid unsupported guarantees.
+
+Why didn't my PDF become smaller?
+Explain that compression depends on the PDF's existing structure and content.
+
+Does PNG have quality compression?
+Explain PNG lossless behavior.
+
+==================================================
+35. ADSENSE-READY DESIGN
+==================================================
+
+Create placeholder ad areas:
+
+1. Top leaderboard
+2. Between tool sections
+3. Bottom/sidebar rectangle
+
+Do NOT load real AdSense.
+
+Use:
+<!-- Future Google AdSense placement -->
+
+Placeholders must:
+- reserve reasonable space
+- be responsive
+- avoid layout shifts
+- not look like clickable fake ads
+
+Do not encourage ad clicks.
+
+==================================================
+36. FOOTER
+==================================================
+
+Create a professional footer.
+
+Sections:
+
+DocuShrink
+Short description.
+
+Tools
+- Compress Image
+- Resize Image
+- Convert Image
+- Image to PDF
+- Merge PDF
+- Split PDF
+
+Company
+- About
+- Contact
+
+Legal
+- Privacy Policy
+- Terms of Service
+
+Bottom:
+© 2026 DocuShrink. All rights reserved.
+
+Do not invent a fake company address.
+
+==================================================
+37. PRIVACY POLICY
+==================================================
+
+Create a proper privacy policy page/section.
+
+Discuss:
+- client-side processing
+- file handling
+- temporary browser memory
+- cookies
+- analytics if implemented
+- advertising if later implemented
+- third-party CDNs
+- contact information
+- changes to policy
+
+Do not make claims that conflict with actual implementation.
+
+==================================================
+38. TERMS OF SERVICE
+==================================================
+
+Create a reasonable Terms of Service page.
+
+Include:
+- acceptable use
+- user responsibility
+- limitations
+- availability
+- third-party services
+- intellectual property
+- disclaimers
+
+Do not invent legal entities.
+
+==================================================
+39. ABOUT PAGE
+==================================================
+
+Create:
+
+About DocuShrink
+
+Explain that DocuShrink is designed to make everyday file operations simpler while prioritizing browser-based processing and user privacy.
+
+Keep it authentic.
+
+Do not invent:
+- founders
+- employees
+- awards
+- funding
+- company history
+
+==================================================
+40. CONTACT PAGE
+==================================================
+
+Create a Contact section.
+
+Because there is no backend contact system:
+
+Use either:
+- mailto placeholder
+- clearly marked placeholder email
+
+Example:
+Email: replace-this@example.com
+
+Clearly comment that it must be replaced before production.
+
+Do not create a fake working contact system.
+
+==================================================
+41. ACCESSIBILITY
+==================================================
+
+Follow WCAG-friendly practices.
+
+Implement:
+- semantic HTML
+- proper heading hierarchy
+- keyboard navigation
+- focus states
+- labels
+- ARIA where appropriate
+- accessible accordions
+- accessible dialogs
+- alt text
+- sufficient contrast
+- reduced-motion support
+
+==================================================
+42. RESPONSIVE DESIGN
+==================================================
+
+Test:
+Mobile: 320px, 375px, 390px, 414px
+Tablet: 768px, 1024px
+Desktop: 1280px, 1440px, 1920px
+
+Requirements:
+- no horizontal scrolling
+- readable text
+- usable controls
+- responsive tool cards
+- responsive uploader
+- mobile-friendly navigation
+- stacked comparison layouts
+- responsive ad placeholders
+
+==================================================
+43. PERFORMANCE
+==================================================
+
+Optimize:
+- initial page load
+- JavaScript execution
+- image previews
+- PDF rendering
+- memory usage
+- object URL cleanup
+- unnecessary DOM updates
+
+Use lazy loading where useful.
+
+Avoid loading heavy libraries until needed if practical.
+
+==================================================
+44. SECURITY
+==================================================
+
+Never execute uploaded files.
+
+Validate:
+- MIME type
+- extension
+- file size
+
+Never use eval().
+
+Avoid unsafe dynamic HTML.
+
+Do not upload user files.
+
+==================================================
+45. ERROR HANDLING
+==================================================
+
+Handle:
+- unsupported files
+- corrupt files
+- oversized files
+- browser incompatibility
+- PDF parsing failures
+- Canvas failures
+- ZIP failures
+- download failures
+- invalid page ranges
+- empty selections
+
+Show friendly messages.
+
+Do not expose raw stack traces to users.
+
+==================================================
+46. NAVIGATION
+==================================================
+
+Create clean routes/pages or static tool pages.
+
+Examples:
+/
+ /compress-image
+ /resize-image
+ /convert-image
+ /crop-image
+ /image-to-pdf
+ /jpg-to-pdf
+ /merge-pdf
+ /split-pdf
+ /pdf-to-jpg
+ /compress-pdf
+ /about
+ /privacy
+ /terms
+ /contact
+
+If static hosting makes routing difficult, implement equivalent static HTML pages or hash-based navigation.
+
+==================================================
+47. HOMEPAGE DESIGN
+==================================================
+
+Homepage structure:
+
+HEADER
+
+HERO
+
+TOP AD PLACEHOLDER
+
+POPULAR TOOLS
+
+IMAGE TOOLS
+
+PDF TOOLS
+
+COMING SOON
+
+PRIVACY/TRUST SECTION
+
+HOW IT WORKS
+
+WHY DOCUSHRINK
+
+SEO CONTENT
+
+FAQ
+
+MIDDLE/BOTTOM AD PLACEHOLDER
+
+FOOTER
+
+==================================================
+48. POPULAR TOOLS
+==================================================
+
+Feature:
+1. Compress Image
+2. Resize Image
+3. JPG to PDF
+4. Image to PDF
+5. Merge PDF
+6. PDF to JPG
+
+Make these visually prominent.
+
+==================================================
+49. DESIGN RULE
+==================================================
+
+The interface should feel like a real modern product, not a college assignment.
+
+Use:
+- excellent spacing
+- polished cards
+- consistent icons
+- professional typography
+- subtle animations
+- strong hierarchy
+- clean forms
+- intuitive workflows
+
+Do not over-design.
+
+Avoid:
+- excessive gradients
+- excessive animations
+- clutter
+- huge text everywhere
+- unnecessary popups
+
+==================================================
+50. NO COPYING RULE
+==================================================
+
+Do not copy iLovePDF.
+
+You may take inspiration from the general concept:
+A homepage containing multiple file utilities.
+
+But DocuShrink must have:
+- original logo
+- original colors
+- original layout
+- original copy
+- original icons
+- original component design
+- original implementation
+
+==================================================
+51. TESTING REQUIREMENT
+==================================================
+
+Do not stop after generating code.
+
+Actually launch the website locally.
+
+Use a lightweight server such as:
+
+python -m http.server 8000
+
+Then open the website in a browser.
+
+==================================================
+52. REQUIRED TESTS
+==================================================
+
+Homepage:
+- page loads
+- navigation works
+- tool cards work
+- responsive layout works
+
+Compress Image:
+- JPG
+- PNG
+- WebP
+- drag/drop
+- multiple files
+- quality slider
+- 50 KB preset
+- 100 KB preset
+- 200 KB preset
+- JPG output
+- PNG output
+- WebP output
+- comparison
+- reduction calculation
+- download
+- ZIP
+- reset
+
+Resize:
+- width
+- height
+- aspect ratio
+- output
+- download
+
+Convert:
+- JPG to PNG
+- PNG to JPG
+- JPG to WebP
+- WebP to JPG
+- batch conversion
+
+Crop:
+- crop
+- reset
+- download
+
+Image to PDF:
+- single image
+- multiple images
+- ordering
+- A4
+- download
+
+PDF tools:
+- merge
+- split
+- PDF to JPG
+- JPG to PDF
+
+UI:
+- FAQ accordion
+- modal/sections
+- footer links
+- mobile
+- desktop
+- keyboard navigation
+
+==================================================
+53. NETWORK PRIVACY TEST
+==================================================
+
+This is extremely important.
+
+Verify that user images are NOT being uploaded.
+
+Use browser developer tools/network inspection where available.
+
+Confirm there is no request containing the user's image file to a server.
+
+Document the result.
+
+==================================================
+54. CONSOLE TEST
+==================================================
+
+Check browser console.
+
+There should be:
+- no uncaught JavaScript errors
+- no broken resource errors
+- no unnecessary warnings
+
+Fix problems before declaring completion.
+
+==================================================
+55. TEST RESULTS FILE
+==================================================
+
+Create:
+
+tests/test-results.md
+
+Format:
+
+| Test | Expected | Actual | Status |
+|------|----------|--------|--------|
+| JPG upload | Works | Works | PASS |
+| PNG upload | Works | Works | PASS |
+| ZIP download | Works | Works | PASS |
+
+Only mark PASS if actually tested.
+
+==================================================
+56. SCREENSHOT VERIFICATION
+==================================================
+
+Capture screenshots if the environment allows it.
+
+Capture:
+1. Homepage desktop
+2. Tool directory
+3. Compressor with image loaded
+4. Compression result
+5. Mobile homepage
+6. FAQ
+7. Footer/legal section
+
+Store them as verification artifacts where possible.
+
+==================================================
+57. README
+==================================================
+
+Create a professional README.md containing:
+
+Project:
+What DocuShrink is.
+
+Features:
+All implemented tools.
+
+Architecture:
+Explain client-side processing.
+
+Technologies:
+List libraries.
+
+Privacy:
+Explain the file-processing model.
+
+Local Setup:
+Give exact commands.
+
+Testing:
+Explain tests performed.
+
+Deployment:
+Explain how to deploy to static hosting.
+
+SEO:
+Explain metadata, sitemap and robots.txt.
+
+AdSense:
+Explain placeholders and what must happen before real AdSense integration.
+
+Limitations:
+Be honest.
+
+Future Roadmap:
+Suggest future features.
+
+==================================================
+58. DEPLOYMENT PREPARATION
+==================================================
+
+Prepare the website for static deployment.
+
+Support platforms such as:
+- GitHub Pages
+- Netlify
+- Vercel
+- Cloudflare Pages
+- Firebase Hosting
+
+Create:
+- favicon
+- robots.txt
+- sitemap.xml
+- canonical URL placeholder
+- Open Graph metadata
+
+Do not use a fake final domain.
+
+Use a clearly marked placeholder such as:
+https://example.com/
+
+until the real domain is known.
+
+==================================================
+59. GOOGLE SEARCH READINESS
+==================================================
+
+Goal:
+Website → Deploy → Google Search Console → Indexing → SEO growth
+
+Do not claim that the website will automatically rank highly on Google.
+
+Prepare:
+- unique page titles
+- useful descriptions
+- semantic HTML
+- internal linking
+- sitemap
+- robots.txt
+- canonical URLs
+- structured data
+- useful original content
+- mobile responsiveness
+- fast loading
+
+==================================================
+60. ADSENSE READINESS
+==================================================
+
+Prepare the website structurally for future Google AdSense.
+
+Do NOT claim AdSense approval is guaranteed.
+
+Before AdSense integration, ensure the site has:
+- useful original content
+- privacy policy
+- terms
+- contact information
+- about page
+- clear navigation
+- functional tools
+- no misleading content
+
+==================================================
+61. IMPORTANT REAL-WORLD LIMITATIONS
+==================================================
+
+Do not claim:
+Every PDF can be compressed perfectly.
+
+Do not claim:
+Every file will reach exactly 50 KB.
+
+Do not claim:
+100% of all processing is always private
+
+if any third-party service actually receives data.
+
+Privacy statements must reflect actual implementation.
+
+==================================================
+62. CODE QUALITY
+==================================================
+
+Use:
+- descriptive variable names
+- modular functions
+- reusable components
+- comments for complex logic
+- error handling
+- clean formatting
+
+Do not generate unnecessarily complicated code.
+
+This project will be reviewed as a B.Tech CSE project, so the code should be understandable enough for a student to explain during a viva.
+
+==================================================
+63. VIVA / PROJECT DOCUMENTATION
+==================================================
+
+Create a section in README explaining:
+
+Problem Statement:
+Users frequently need simple tools to reduce image sizes and manage documents.
+
+Proposed Solution:
+DocuShrink provides browser-based utilities without requiring unnecessary uploads.
+
+Technologies Used:
+HTML5, CSS, JavaScript, Canvas, PDF libraries, JSZip.
+
+Key Concepts Demonstrated:
+- File handling
+- Client-side processing
+- Canvas API
+- asynchronous JavaScript
+- Blob manipulation
+- PDF processing
+- ZIP generation
+- responsive design
+- SEO
+- accessibility
+- security
+- performance optimization
+
+==================================================
+64. DEVELOPMENT PHASES
+==================================================
+
+Implement in this order:
+
+Phase 1:
+- Homepage
+- Header
+- Footer
+- Tool cards
+- Responsive UI
+- SEO foundation
+
+Phase 2:
+- Image compressor
+- Image converter
+- Image resizer
+- Image cropper
+
+Phase 3:
+- Image to PDF
+- JPG to PDF
+
+Phase 4:
+- Merge PDF
+- Split PDF
+- PDF to JPG
+- PDF optimization
+
+Phase 5:
+- FAQ
+- Privacy
+- Terms
+- About
+- Contact
+- Ad placeholders
+
+Phase 6:
+- Testing
+- Performance
+- Accessibility
+- Security
+- SEO
+- Deployment preparation
+
+==================================================
+65. FINAL EXECUTION
+==================================================
+
+Do not simply give me source code.
+
+Actually perform the development workflow available in your environment:
+
+PLAN
+↓
+CREATE FILES
+↓
+IMPLEMENT
+↓
+RUN LOCAL SERVER
+↓
+OPEN/VERIFY WEBSITE
+↓
+TEST FEATURES
+↓
+FIND BUGS
+↓
+FIX BUGS
+↓
+RUN TESTS AGAIN
+↓
+CHECK CONSOLE
+↓
+CHECK NETWORK PRIVACY
+↓
+CHECK MOBILE RESPONSIVENESS
+↓
+CREATE TEST RESULTS
+↓
+CREATE README
+↓
+FINAL REVIEW
+
+==================================================
+66. FINAL RESPONSE
+==================================================
+
+After completing the work, give me a concise final report containing:
+
+1. Status
+Working / Issues remaining
+
+2. Files created
+List files.
+
+3. Implemented tools
+List tools that actually work.
+
+4. Coming Soon tools
+List tools that are not implemented.
+
+5. Tests
+Show test summary.
+
+6. Verification
+Mention screenshots and artifacts created.
+
+7. Local URL
+Provide the local development URL.
+
+8. Deployment
+Explain exactly how to deploy.
+
+9. Known limitations
+Be honest.
+
+10. Next recommended improvements
+Give the next 5 improvements.
+
+==================================================
+FINAL SUCCESS CRITERIA
+==================================================
+
+The project is complete only when:
+
+- Homepage works
+- Navigation works
+- Image compressor works
+- Image converter works
+- Image resizer works
+- Image cropper works
+- Image-to-PDF works
+- JPG-to-PDF works
+- PDF tools implemented are actually tested
+- Coming-soon tools are clearly labeled
+- Batch processing works where supported
+- Downloads work
+- ZIP downloads work
+- Responsive design works
+- FAQ works
+- Privacy/Terms/About/Contact work
+- SEO metadata exists
+- robots.txt exists
+- sitemap.xml exists
+- Ad placeholders exist
+- No image upload backend exists
+- Browser console has no critical errors
+- Test results are documented
+- README is complete
+- The website is deployable as a static website
+
+Do not declare the project complete until these requirements have been verified.
+
+BUILD DOCUSHRINK NOW.

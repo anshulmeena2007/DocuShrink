@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resize Image Online (JPG, PNG, WebP) | DocuShrink</title>
+  
+  <!-- SEO Metadata -->
+  <meta name="description" content="Resize image dimensions by exact pixels or percentage scale. Lock aspect ratio or customize width and height client-side. Fast, free, and private." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://example.com/tools/resize-image.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Resize Image Online (Pixels & Percentage) | DocuShrink" />
+  <meta property="og:description" content="Resize JPG, PNG, and WebP images by exact pixel dimensions or percentage scaling with aspect ratio lock. 100% private in-browser tool." />
+  <meta property="og:url" content="https://example.com/tools/resize-image.html" />
+  <meta property="og:image" content="https://example.com/assets/logo.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Resize Image Online (Pixels & Percentage) | DocuShrink" />
+  <meta name="twitter:description" content="Resize JPG, PNG, and WebP images by exact pixel dimensions or percentage scaling with aspect ratio lock. 100% private in-browser tool." />
+  <meta name="twitter:image" content="https://example.com/assets/logo.svg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#F0FDFA',
+              100: '#CCFBF1',
+              200: '#99F6E4',
+              300: '#5EEAD4',
+              400: '#2DD4BF',
+              500: '#14B8A6',
+              600: '#0D9488',
+              700: '#0F766E',
+              800: '#115E59',
+              900: '#134E4A',
+              950: '#042F2E',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Core Styles -->
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Structured Data: SoftwareApplication & Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "DocuShrink Image Resizer",
+        "operatingSystem": "All",
+        "applicationCategory": "UtilitiesApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Resize JPG, PNG, and WebP images by exact pixel dimensions or percentage scaling with aspect ratio lock. 100% private in-browser tool."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://example.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Image Tools",
+            "item": "https://example.com/#image-tools"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Resize Image",
+            "item": "https://example.com/tools/resize-image.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 flex flex-col min-h-screen">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==========================================
+       GLOBAL HEADER
+       ========================================== -->
+  <header class="sticky top-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <a href="../index.html" class="flex items-center gap-2 group focus:outline-none" aria-label="DocuShrink Homepage">
+          <img src="../assets/logo.svg" alt="DocuShrink Logo" class="h-9 sm:h-11 w-auto" />
+        </a>
+
+        <nav class="hidden lg:flex items-center space-x-1" aria-label="Primary Navigation">
+          <a href="../index.html#tools" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">All Tools</a>
+          <a href="compress-image.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Compress</a>
+          <a href="resize-image.html" class="px-2.5 py-1.5 text-sm font-bold text-brand-700 bg-brand-50 rounded-lg">Resize</a>
+          <a href="convert-image.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Convert</a>
+          <a href="crop-image.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Crop</a>
+          <a href="image-to-pdf.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Image to PDF</a>
+          <a href="merge-pdf.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Merge PDF</a>
+          <a href="split-pdf.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Split PDF</a>
+          <a href="pdf-to-jpg.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">PDF to JPG</a>
+          <a href="compress-pdf.html" class="px-2.5 py-1.5 text-sm font-medium text-slate-700 hover:text-brand-700 hover:bg-brand-50 rounded-lg transition-colors">Compress PDF</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="../about.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700">About</a>
+          <a href="../contact.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-brand-700">Contact</a>
+        </div>
+
+        <div class="flex lg:hidden">
+          <button id="mobile-menu-btn" type="button" class="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="lg:hidden menu-hidden px-4 pt-2 pb-4 bg-white border-b border-slate-200 shadow-lg space-y-1">
+      <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Home</a>
+      <a href="../index.html#tools" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">All Tools</a>
+      <a href="compress-image.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Compress Image</a>
+      <a href="resize-image.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Resize Image</a>
+      <a href="convert-image.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Convert Image</a>
+      <a href="crop-image.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Crop Image</a>
+      <a href="image-to-pdf.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Image to PDF</a>
+      <a href="jpg-to-pdf.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">JPG to PDF</a>
+      <a href="merge-pdf.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Merge PDF</a>
+      <a href="split-pdf.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Split PDF</a>
+      <a href="pdf-to-jpg.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">PDF to JPG</a>
+      <a href="compress-pdf.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Compress PDF</a>
+      <div class="pt-2 border-t border-slate-100 mt-2 space-y-1">
+        <a href="../about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">About Us</a>
+        <a href="../contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Contact</a>
+        <a href="../privacy.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Privacy Policy</a>
+        <a href="../terms.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-brand-50">Terms of Service</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       BREADCRUMBS
+       ========================================== -->
+  <nav class="bg-slate-100 border-b border-slate-200 py-2.5" aria-label="Breadcrumb">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ol class="flex items-center space-x-2 text-xs text-slate-600">
+        <li><a href="../index.html" class="hover:text-brand-600">Home</a></li>
+        <li class="text-slate-400">/</li>
+        <li><a href="../index.html#image-tools" class="hover:text-brand-600">Image Tools</a></li>
+        <li class="text-slate-400">/</li>
+        <li class="font-semibold text-slate-800" aria-current="page">Resize Image</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       MAIN TOOL APPLICATION
+       ========================================== -->
+  <main id="main-content" class="flex-grow py-8 sm:py-12">
+    <div id="resize-tool-app" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Tool Header -->
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-brand-100 text-brand-800 mb-3">
+          100% Client-Side Resizer
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Resize Image Dimensions</h1>
+        <p class="mt-2 text-base text-slate-600">
+          Scale images by exact pixel width and height or percentage scale while maintaining crisp aspect ratios.
+        </p>
+      </div>
+
+      <!-- DROPZONE COMPONENT -->
+      <div id="resize-dropzone" class="bg-white border-2 border-dashed border-slate-300 hover:border-brand-500 rounded-2xl p-8 sm:p-12 text-center cursor-pointer transition-all shadow-sm hover:shadow-md mb-8 relative">
+        <input type="file" id="resize-file-input" accept="image/jpeg,image/png,image/webp" class="hidden" />
+        <div class="flex flex-col items-center justify-center pointer-events-none">
+          <div class="w-16 h-16 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+            </svg>
+          </div>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 mb-1">Select an image to resize</h2>
+          <p class="text-sm text-slate-500 mb-4">or drag and drop here</p>
+          <div class="flex items-center gap-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+            <span>JPG</span> • <span>PNG</span> • <span>WebP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESIZE WORKSPACE (Hidden initially) -->
+      <div id="resize-workspace" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+        
+        <!-- Left: Image Preview & Details -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-white rounded-2xl border border-slate-200 p-5 shadow-sm">
+            <div class="flex items-center justify-between mb-3">
+              <h3 id="resize-filename" class="text-sm font-bold text-slate-800 truncate max-w-xs"></h3>
+              <button id="btn-reset-resize" class="text-xs text-rose-600 hover:text-rose-800 font-medium">Change Image</button>
+            </div>
+            
+            <div class="w-full bg-slate-100 border border-slate-200 rounded-xl overflow-hidden flex items-center justify-center min-h-[260px] max-h-[380px] p-2">
+              <img id="resize-preview-img" src="" alt="Resize Preview" class="max-h-[360px] w-auto max-w-full object-contain rounded-lg shadow-sm" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-100 text-xs text-slate-600">
+              <div>
+                <span class="text-slate-400 block">Original Dimensions:</span>
+                <span id="resize-orig-dims" class="font-bold text-slate-800 text-sm"></span>
+              </div>
+              <div>
+                <span class="text-slate-400 block">Original File Size:</span>
+                <span id="resize-orig-size" class="font-bold text-slate-800 text-sm"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Resize Controls & Export -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm space-y-5">
+            <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">Dimension Settings</h3>
+
+            <!-- Dimension Inputs -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="resize-width" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Width (px)</label>
+                <input type="number" id="resize-width" min="1" max="10000" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-900 focus:ring-2 focus:ring-brand-500 focus:outline-none" />
+              </div>
+              <div>
+                <label for="resize-height" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Height (px)</label>
+                <input type="number" id="resize-height" min="1" max="10000" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-base font-bold text-slate-900 focus:ring-2 focus:ring-brand-500 focus:outline-none" />
+              </div>
+            </div>
+
+            <!-- Aspect Ratio Lock Checkbox -->
+            <div class="flex items-center gap-2 pt-1">
+              <input type="checkbox" id="lock-aspect-ratio" checked class="w-4 h-4 text-brand-600 rounded border-slate-300 focus:ring-brand-500" />
+              <label for="lock-aspect-ratio" class="text-sm font-semibold text-slate-700 select-none cursor-pointer">
+                Maintain aspect ratio
+              </label>
+            </div>
+
+            <!-- Percentage Scale Presets -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Percentage Scaling</label>
+              <div class="grid grid-cols-4 gap-2">
+                <button type="button" data-percent="25" class="percent-preset-btn px-2 py-2 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">
+                  25%
+                </button>
+                <button type="button" data-percent="50" class="percent-preset-btn px-2 py-2 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">
+                  50%
+                </button>
+                <button type="button" data-percent="75" class="percent-preset-btn px-2 py-2 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">
+                  75%
+                </button>
+                <button type="button" data-percent="100" class="percent-preset-btn px-2 py-2 text-xs font-semibold rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">
+                  100%
+                </button>
+              </div>
+            </div>
+
+            <!-- Output Format -->
+            <div>
+              <label for="resize-format-select" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Output Format</label>
+              <select id="resize-format-select" class="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-lg text-sm font-medium text-slate-800 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                <option value="original">Maintain Original Format</option>
+                <option value="jpg">JPG (.jpg)</option>
+                <option value="png">PNG (.png)</option>
+                <option value="webp">WebP (.webp)</option>
+              </select>
+            </div>
+
+            <!-- Output Result Info -->
+            <div class="p-4 bg-brand-50/70 border border-brand-100 rounded-xl space-y-1 text-xs text-brand-900">
+              <div class="flex justify-between">
+                <span>New Dimensions:</span>
+                <span id="resize-result-dims" class="font-bold"></span>
+              </div>
+              <div class="flex justify-between">
+                <span>Estimated Size:</span>
+                <span id="resize-result-size" class="font-bold"></span>
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="space-y-2 pt-2">
+              <button id="btn-execute-resize" class="w-full py-3 text-sm font-semibold rounded-xl bg-slate-900 hover:bg-slate-800 text-white shadow-sm transition-all flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Apply Resize
+              </button>
+              
+              <button id="btn-download-resize" class="w-full py-3 text-sm font-semibold rounded-xl bg-brand-600 hover:bg-brand-700 text-white shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download Resized Image
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- AD PLACEHOLDER -->
+      <div class="my-8">
+        <div class="ad-placeholder-unit" aria-label="Advertisement Banner">
+          <span class="ad-placeholder-label">ADVERTISEMENT</span>
+          <span class="ad-placeholder-desc">Reserved Ad Slot — Content Banner</span>
+          <!-- Future Google AdSense placement -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+    <!-- ==========================================
+       GLOBAL FOOTER
+       ========================================== -->
+  <footer class="bg-slate-900 text-slate-400 text-sm border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        
+        <!-- Image Tools -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Image Tools</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="compress-image.html" class="hover:text-white transition-colors">Compress Image</a></li>
+            <li><a href="resize-image.html" class="hover:text-white transition-colors">Resize Image</a></li>
+            <li><a href="convert-image.html" class="hover:text-white transition-colors">Convert Image</a></li>
+            <li><a href="crop-image.html" class="hover:text-white transition-colors">Crop Image</a></li>
+            <li><a href="image-to-pdf.html" class="hover:text-white transition-colors">Image to PDF</a></li>
+          </ul>
+        </div>
+
+        <!-- PDF Tools -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">PDF Tools</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="merge-pdf.html" class="hover:text-white transition-colors">Merge PDF</a></li>
+            <li><a href="split-pdf.html" class="hover:text-white transition-colors">Split PDF</a></li>
+            <li><a href="pdf-to-jpg.html" class="hover:text-white transition-colors">PDF to JPG</a></li>
+            <li><a href="jpg-to-pdf.html" class="hover:text-white transition-colors">JPG to PDF</a></li>
+            <li><a href="compress-pdf.html" class="hover:text-white transition-colors">Compress PDF</a></li>
+          </ul>
+        </div>
+
+        <!-- Informational -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">About &amp; Help</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="../about.html" class="hover:text-white transition-colors">About DocuShrink</a></li>
+            <li><a href="../index.html#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
+            <li><a href="../index.html#faq" class="hover:text-white transition-colors">FAQ</a></li>
+            <li><a href="../contact.html" class="hover:text-white transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Legal</h3>
+          <ul class="space-y-2 text-xs">
+            <li><a href="../privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="../terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+            <li><a href="../index.html#privacy-trust" class="hover:text-white transition-colors">Privacy Commitment</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+        <p>&copy; 2026 DocuShrink. All rights reserved. Simple tools for your files. Private by design.</p>
+        <p class="text-slate-500">100% In-Browser Client-Side Processing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/utils.js"></script>
+  <script src="../js/image-resizer.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>
